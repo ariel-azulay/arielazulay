@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar fixed-top navbara navbar-expand-xl bg-body-tertiary">
+        <div class="container-fluid w-75 m-auto">
+          <a class="navbar-brand all_text" href="#">ראשי</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link  all_text" aria-current="page" href="#aboutme">
+                  אודות
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link all_text" href="#services">שירותים</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link all_text" href="#landing">עבודות</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link all_text" href="#form">צור קשר</a>
+              </li>
+            </ul>
+            <!-- כפתור -->
+            <!-- <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button> -->
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <main class="container-fluid m-0 p-0">
+      <!-- תוכן כניסה סגול  -->
+      <div
+        class="container-fluid text-center d-flex flex-column justify-content-center align-content-center mainbg  "
+      >
+      
+        <div class="container-fluid d-flex flex-column justify-content-center align-content-center text-center">
+          
+          <h1 class="container-fluid d-flext ">ברוכים הבאים לפורטפוליו שלי</h1>
+          <h2 class= "d-flex justify-content-center text-center   ">
+          "עיצוב חוויות דיגיטליות ופיתוח פתרונות יצירתיים"
+          </h2> 
+          <h2 class="d-flex justify-content-center text-center ">
+            "בואו איתי למסע שבו נכיר טוב יותר"
+          </h2>
+        </div>
+    
+      </div>
+
+      <!--   כפתור קורות חיים + איך עושים הורדה -->
+      <div class="container-fluid  text-center p-4  border">
+        <a
+          href="/txt/projectX.txt"
+          download="/txt/projectX.txt"
+          class="btn btn-primary my-custom-button"
+          >להורדת קוד האתר</a
+        >
+
+        <a  onclick="alert(' בקרוב יעלו פו קורות חיים ')" class="btn btn-primary my-custom-button" href="#" >להורדת קורות חיים</a>
+      </div>
+
+      <!-- קצת עלי תמונה עם טקסט -->
+      <div id="aboutme" class="container-fluid abouta d-flex">
+
+        <div class="container d-flex col-md-6 justify-content-center">
+
+          <img
+          class="rounded p-4 "
+          src="./photo/ariel.jpg"
+          width="270px"
+          
+          alt="my picture"
+          id="imga"
+          
+        />
+
+      </div>
+        <div class="container text-aboutme d-flex flex-column justify-content-center text-center ">
+          <h2 class="p-2 all_text">אריאל אזולאי</h2>
+          <p class="all_text">
+            "שמי אריאל אזולאי, בן 27, מתגורר בקריית יערים. אני עובד כיום בתחום האבטחה ובמקביל לומד קורס Full Stack במכללה, תוך שאיפה להתמקצע בעולם הפיתוח והטכנולוגיה. 
+            <br>
+            הקורס מקנה לי כלים מעשיים בפיתוח אפליקציות מלא - החל מצד הלקוח (Frontend) דרך צד השרת (Backend) ועד לניהול בסיסי נתונים, וזו עבורי הזדמנות מרגשת להרחיב את הידע הטכנולוגי שלי.
+            <br><br>
+            בזמני החופשי אני אוהב לצאת לטבע, לקרוא ספרים מעניינים ולעשות ספורט כשיש לי הזדמנות. תחומי העניין שלי מתמקדים בכל מה שחדש ופורץ דרך - אני תמיד מחפש רעיונות חדשניים וטכנולוגיות מהפכניות.
+            <br><br>
+            היצירתיות והרצון ללמוד מאפיינים אותי, ואני מאמין בהתפתחות מתמדת הן בעבודה והן באופן אישי."
+          </p>
+          
+          
+          <button  class="btn btn-primary my-custom-button m-auto mt-3 mb-4">
+            more about me
+          </button>
+        </div>
+      </div>
+      <!-- באילו כלים השתמשתי בשביל להגיע לכך -->
+      <div class="container-fluid d-flex flex-wrap border border- ">
+        <img
+          src="/icons/img-HTML.png"
+          class="rounded mx-auto d-block"
+          alt="..."
+        />
+        <img
+          src="/icons/img-CSS.png"
+          class="rounded mx-auto d-block"
+          alt="..."
+        />
+        <img
+          src="/icons/img-Bootstrap.png"
+          class="rounded mx-auto d-block"
+          alt="..."
+        />
+      </div>
+
+      <!--שירותים מוצעים-->
+      <div id="services" class="container-fluid servicesa align-items-center d-flex flex-column p-3 text-white ">
+        <h2 class="d-flex text-center justify-content-cente p-4">שירותים מוצעים</h2>
+        <div class="container d-flex  justify-content-center align-content-center col-12">
+
+            <div class="row text-center pb-4">
+                  <div
+                    class="container d-flex flex-column col-md-4 col-sm-12"
+                  >
+                    <h3>אפיון אתר</h3>
+                    <p>
+                     
+
+                      אפיון אתר הוא תהליך חיוני בבניית האינטרנט
+                      המומחים שלנו מנתחים את צרכי העסק שלך
+                      אנו יוצרים מפת דרכים מפורטת לחוויית משתמש
+                      התכנון כולל עיצוב ממשק, ניווט וארכיטקטורת מידע
+                      בתהליך האפיון נגדיר פונקציונליות וזרימת המשתמש באתר
+                      האפיון המקצועי מבטיח הצלחה ויעילות בפיתוח האתר
+                    </p>
+                  </div>
+                  <div
+                    class="container d-flex flex-column col-md-4 col-sm-12"
+                  >
+                    <h3>עיצוב אתרים</h3>
+                    <p>
+                        עיצוב אתר מקצועי משלב אסתטיקה עם חווית משתמש
+                        צוות המעצבים שלנו יוצר ממשק מרהיב ומושך
+                        אנו מתאימים את העיצוב לזהות המותג שלך
+                        כל אלמנט מתוכנן בקפידה ליצירת חוויה מושלמת
+                        השילוב בין צבעים, טיפוגרפיה ותמונות יוצר הרמוניה
+                        העיצוב המודרני מותאם לכל המכשירים והמסכים השונים
+                    </p>
+                  </div>
+                  <div
+                    class="container d-flex  flex-column col-md-4 col-sm-12"
+                  >
+                    <h3 >פיתוח אתרים</h3>
+                    <p>
+                      פיתוח אתר מקצועי מהווה תשתית לעסק מצליח
+                      הטכנולוגיות המתקדמות ביותר משולבות בתהליך הבנייה המקיף
+                      המפתחים שלנו יוצרים קוד נקי וביצועים מהירים
+                      האתר נבנה בצורה מאובטחת עם תמיכה בכל
+                      התאמה מושלמת לכל הדפדפנים ומערכות ההפעלה השונות
+                      שילוב מערכות מתקדמות להשגת תוצאות עסקיות מצוינות
+                    </p>
+                  </div>
+                  <div
+                    class="container d-flex flex-column col-md-6 col-sm-12 pt-3"
+                  >
+                    <h3>בניית דפי נחיתה</h3>
+                    <p>
+                      דף נחיתה מקצועי מוביל להמרות וללקוחות חדשים
+                      בניית דפי נחיתה ממוקדת מטרה להשגת תוצאות
+                      אנו מתמקדים במסרים שיווקיים וקריאות לפעולה חזקות
+                      העיצוב הממוקד מוביל את המשתמש לביצוע הרכישה
+                      כל אלמנט בדף מתוכנן להגדיל את אחוזי
+                      טפסים חכמים וכפתורי פעולה מניעים להצלחה עסקית
+                    </p>
+                  </div>
+                  <div
+                    class="container d-flex flex-column col-md-6 col-sm-12 pt-3"
+                  >
+                    <h3>פיתוח מערכות</h3>
+                    <p>
+                      פיתוח מערכות מתקדמות מותאמות במיוחד לצרכי הארגון
+                      אנו מפתחים פתרונות טכנולוגיים חכמים לניהול העסק
+                      המערכות שלנו משלבות אוטומציה וממשקים מתקדמים ביותר
+                      פתרונות תוכנה מקיפים לייעול תהליכים ושיפור ביצועים
+                      מערכות מאובטחות המתממשקות עם כלי ניהול קיימים
+                      פיתוח חדשני מבטיח יעילות תפעולית וצמיחה עסקית
+                    </p>
+                  </div>
+
+            </div>     
+        </div>
+      </div>
+
+      <!--דפי נחיתה-->
+      <div id="landing"
+        class="container-fluid worksa d-flex flex-column justify-content-center align-content-center text-center border-top"
+      >
+        <!-- כותרת לדפי נחיתה -->
+        <h2 class="hi m-4 ">עבודות דפי נחיתה</h2>
+        <!-- <div
+          class="container d-flex text-center flex-row justify-content-center align-content-center flex-row-reverse"
+        >
+          <div class="container d-flex flex-column">
+            <h3>some service</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex
+              eum iste labore quos ipsum vero alias blanditiis voluptatum,
+              repellendus itaque magnam laudantium amet molestias sit est unde
+              sequi cupiditate.
+            </p>
+          </div>
+          <div class="container d-flex flex-column">
+            <h3>some service</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex
+              eum iste labore quos ipsum vero alias blanditiis voluptatum,
+              repellendus itaque magnam laudantium amet molestias sit est unde
+              sequi cupiditate.
+            </p>
+          </div>
+          <div class="container d-flex flex-column">
+            <h3>some service</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex
+              eum iste labore quos ipsum vero alias blanditiis voluptatum,
+              repellendus itaque magnam laudantium amet molestias sit est unde
+              sequi cupiditate.
+            </p>
+          </div>
+          <div class="container d-flex flex-column">
+            <h3>some service</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex
+              eum iste labore quos ipsum vero alias blanditiis voluptatum,
+              repellendus itaque magnam laudantium amet molestias sit est unde
+              sequi cupiditate.
+            </p>
+          </div>
+          <div class="container d-flex flex-column">
+            <h3>some service</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex
+              eum iste labore quos ipsum vero alias blanditiis voluptatum,
+              repellendus itaque magnam laudantium amet molestias sit est unde
+              sequi cupiditate.
+            </p>
+          </div>
+        </div> -->
+
+        <!--  כרטיסיות דפי נחיתה  -->
+        <div
+          class="container  col-md-9 col-sm-12 d-flex flex-wrap gap-4 align-content-center justify-content-center mb-3"
+        >
+          <div class="card card-bd" style="width: 18rem">
+            <img
+              src="./photo/pj1.png"
+              class="card-img-top"
+              height="150px"
+              alt="..."
+            />
+            <div class="card-body ">
+              <h5 class="card-title fw-bold all_text">הובלה קדימה</h5>
+              <p class="card-text all_text">
+                מנהיגים בתחום ההובלה - יוצרים סטנדרט חדש של איכות ומקצועיות. מביאים חזון של שירות מעולה לכל לקוח. מחברים אנשים ומטענים בדרך המיטבית והיעילה ביותר.
+              </p>
+              <a href="./projects/porject-1/toLanding.html" class="btn btn-primary my-custom-button">לפרטים</a>
+            </div>
+          </div>
+          <div class="card card-bd" style="width: 18rem">
+            <img
+              src="./photo/pj2.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold all_text">כאן ועכשיו</h5>
+              <p class="card-text all_text">
+                באו להנות משלל מתנות המעוצבות ומתאימות לפי דרישת הלקוח ,כל מתנה  מעבירה מסר למקבל כך שהוא לא  ישכח חוויה כזו גם בעוד 10 שנים.
+              </p>
+              <a href="./projects/project-2/toLanding.html" class="btn btn-primary my-custom-button">לפרטים</a>
+            </div>
+          </div>
+          <div class="card card-bd" style="width: 18rem">
+            <img
+              src="./photo/pj3.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold all_text">קפה טוב לבוקר טוב</h5>
+              <p class="card-text all_text">
+                רוצים חווית קפה על הבוקר שלא תשכחו ? הנה לכם הזדמנות לקבל קופון 
+                לקפה שישאיר לכם טעם של עוד...
+              </p>
+              <a href="./projects/project-3/toLanding.html" class="btn btn-primary my-custom-button">לפרטים</a>
+            </div>
+          </div>
+          <div class="card card-bd" style="width: 18rem">
+            <img
+              src="./photo/pj4.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold all_text">תן לנו להוביל אותך</h5>
+              <p class="card-text all_text">
+                בוא להיות בחברה המובילה במדינה בקידום ושיווק , נוביל אותך לאורך כל הדרך אל ההצלחה .
+              </p>
+              <a href="./projects/project-4/toLanding.html" class="btn btn-primary my-custom-button">לפרטים</a>
+            </div>
+          </div>
+          <div class="card card-bd" style="width: 18rem">
+            <img
+              src="./photo/pj5.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold all_text">בוא לגלות את העולם</h5>
+              <p class="card-text all_text">
+                הצטרך אלינו למסע סביב העולם לחוות תרבויות חדשות ,לצפות בנופים מרהיבים במקומות המרוחקים והיפים בעולם.
+              </p>
+              <a href="./projects/project-5/toLanding.html" class="btn btn-primary my-custom-button">לפרטים</a>
+            </div>
+          </div>
+          <div class="card card-bd" style="width: 18rem">
+            <img
+              src="./photo/pj6.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold all_text">ייעוץ חינם</h5>
+              <p class="card-text all_text">
+                קבל יעוץ ראשוני חינם ולא מחייב מהמומחים בתחום הכלכלה המומחים שלנו יעברו איתך על כל הנושאים החשובים ותקבל את מלא התמיכה אצלנו. 
+              </p>
+              <a href="./projects/project-6/toLanding.html" class="btn btn-primary my-custom-button">לפרטים</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- טופס הרשמה -->
+      <div id="form" class="container-fluid contacta text-center  justify-content-center border-top">
+        <form >
+          <fieldset>
+            <legend>צור קשר</legend>
+            <div class="mb-3 d-flex flex-column justify-content-center">
+              <label for="disabledTextInput" class="form-label"
+                >הכנס שם פרטי ומשפחה</label
+              >
+              <input
+                type="text"
+                id="disabledTextInput"
+                class="form-control w-50 m-auto "
+                placeholder="ישראלי ישראלי"
+                required
+                
+              />
+            </div>
+            <div class="mb-3">
+              <label for="disabledSelect" class="form-label"
+                >הכנס מספר פלאפון</label
+              >
+              <input
+                type="tel"
+                id="disabledTextInput"
+                class="form-control text-end w-50 m-auto"
+                placeholder="0523456789"
+                required
+              />
+              <!-- <select id="disabledSelect" class="form-select">
+                <option>Disabled select</option>
+              </select> -->
+            </div>
+
+             <div class="mb-3">
+              <label for="disabledSelect" class="form-label">הכנס אימייל</label>
+              <input type="email" name="email" id="email" class="form-control w-50 m-auto" placeholder="exemple@gmail.com" required >
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">הכנס הודעה</label>
+                <textarea class="form-control w-50 m-auto" id="exampleFormControlTextarea1" rows="3" required></textarea>
+              </div>
+            <!-- <div class="mb-3">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="disabledFieldsetCheck"
+                  disabled
+                />
+                <label class="form-check-label" for="disabledFieldsetCheck">
+                  Can't check this
+                </label>
+              </div>
+            </div> -->
+            <button type="submit" class="btn border border-white btn-primary m-3 my-custom-button">שלח</button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+ 
+    <!-- -------------------------------------------------------------------- -->
+
+    <!-- פוטר -->
+    <footer class="container-fluid p-0 pb-0 d-flex flex-column  justify-content-center  ">
+      
+
+      <div class="col-6 offset-md-1 col-sm-6 mt-2 mb-3 d-flex  justify-content-center  ">
+          <form  class="d-flex flex-column justify-content-center">
+            <h5>הרשם לתיבת הדואר שלנו עוד היום</h5>
+            <p>עדכון יומי של מה חדש אצלנו ובתחום.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                id="newsletter1"
+                type="text"
+                class="form-control"
+                placeholder="הכנס אימייל"
+                required
+              />
+              <input class="btn bta btn-primary my-custom-button " type="submit" >הרשם</button>
+            </div>
+          </form>
+      </div>
+      <!-- זכויות יוצרים -->
+      <div
+        class="container-fluid  text-center rights"
+      >
+        <p  class="m-0">© 2024 , Inc. All rights reserved to ariel azulay</p>
+        
+      </div>
+    </footer>
+
+
+    <!-- ----------------------------------------------------------------------. -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

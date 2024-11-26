@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.maindiv {
+  width: 100%;
+  height: 100%;
+}
+.roze {
+  background-image: url(/photo/ורוד.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+}
+.blank {
+  width: 100%;
+  height: 50vh;
+}
+
+.abs-content {
+  padding: 40px;
+  direction: rtl;
+  position: absolute;
+  right: 150px;
+  top: 68px;
+  background-color: rgba(0, 0, 0, 0.744);
+  color: white;
+  width: 300px;
+  height: 340px;
+}
+
+.abs-content > h2 {
+  font-family: "Heebo", sans-serif;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.abs-content > p {
+  font-family: "Heebo", sans-serif;
+  padding-bottom: 10px;
+  font-size: small;
+}
+.abs-content > .inputs > {
+  display: flex;
+  flex-direction: column;
+}
+.abs-content > .inputs > label {
+  display: flex;
+  font-family: "Heebo", sans-serif;
+  flex-direction: column;
+  font-size: 13px;
+  padding-top: 10px;
+  font-weight: 600;
+}
+.abs-content > .inputs > input {
+  width: 100%;
+  height: 27px;
+  border: #d31c75 solid 1px;
+}
+.abs-content > .inputs > button {
+  font-family: "Heebo", sans-serif;
+  font-weight: 600;
+  margin-top: 15px;
+  height: 30px;
+  width: 100px;
+  color: white;
+  background-color: #d31c75;
+  border: none;
+}
+
+@media (max-width: 678px) {
+  .roze {
+    width: 100%;
+    height: 40vh;
+    z-index: 1;
+  }
+  .blank {
+    width: 100%;
+    height: 60vh;
+    z-index: 1;
+  }
+
+  .abs-content {
+   
+    position: absolute;
+    padding: 50px;
+    margin: auto;
+    top: 120px;
+    right: 55px;
+    width: 170px;
+    height: 300px;
+  }
+  .abs-content > h2 {
+    /* padding-top: 60px; */
+    font-size: 30px;
+    text-align: center;
+  }
+  .abs-content > p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .abs-content > .inputs > {
+    width: 80%;
+    height: 5px;
+  }
+
+  .abs-content > .inputs > label {
+    font-size: 10px;
+  }
+  .abs-content > .inputs > input {
+    width: 100%;
+    height: 20px;
+  }
+  .abs-content > .inputs > button {
+    height: 25px;
+    width: 70px;
+  }
+}

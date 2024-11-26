@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./option2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="text">
+        <h1>Here & Now</h1>
+        <h4>רצינו להזמין אתכם להנות משלל מתנות</h4>
+        <p>
+          לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לפרומי בלוף קינץ
+          תתיח לרעח. לת צשחמי צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה.
+        </p>
+      </div>
+      <div class="in">
+        <div class="in1">
+          <div class="form-control">
+            <label for="text">שם</label>
+            <input type="text" id="text" name="text" />
+          </div>
+          <div class="form-control">
+            <label for="email">דוא״ל</label>
+            <input type="email" id="email" name="email" />
+          </div>
+        </div>
+        <button type="submit">עדכנו אותי</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+-------------------------css----------------------------------
+
+
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  background: linear-gradient(#281eff, #2dff8c);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "Satisfy", cursive;
+}
+
+.text > h1 {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  font-weight: 100;
+}
+.text > h4 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  padding-bottom: 10px;
+}
+.text > p {
+  font-family: "Varela Round", sans-serif;
+  padding-bottom: 20px;
+}
+.in {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.in1 {
+  display: flex;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 20px;
+}
+.in > button {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 600;
+  width: 150px;
+  height: 27px;
+  margin-top: 13px;
+  font-size: smaller;
+}
+
+.in > .in1 > .form-control > label {
+  font-size: 12px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 500;
+}
+.in > .in1 > .form-control > input {
+  border: white 2px solid;
+  background-color: #ffffff2d;
+  width: 250px;
+  height: 27px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text {
+    
+    padding: 0;
+    justify-content: center;
+    width: 80%;
+    height: 40vh;
+
+    margin:0 auto;
+  }
+  .text > h1 {
+    padding-top: 25px;
+    font-size: 30px;
+    justify-content: center;
+  }
+  .text > h4 {
+    font-size: 10px;
+  }
+  .text > p {
+    font-size: 8px;
+  }
+  .in {
+    display: block;
+    height: 50vh;
+    
+    
+  }
+  .in1 {
+    flex-direction: column;
+    margin: auto;
+  }
+  .form-control {
+    margin: auto;
+  }
+  .in > button {
+    width:200px ;
+    color: #2823FD;
+  }
+  .in > .in1 > .form-control > label {
+  }
+  .in > .in1 > .form-control > input {
+    width: 200px;
+  }
+}

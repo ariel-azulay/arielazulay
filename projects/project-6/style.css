@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* דיב אבא מלך העולם */
+.dad {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* קטע 45% */
+.cel-pic {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  width: 45%;
+  /* border: 1px solid #000; */
+}
+/* תמונה עצמה */
+.phone {
+  width: 380px;
+  height: 550px;
+  margin: auto;
+}
+/* עיצוב לצהוב */
+.top-yellow {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 250px;
+  height: 10px;
+  background-color: #fdbd03;
+
+  /* border-top: solid #FDBD03 250px; */
+}
+
+/* קטע אבא 55% */
+.form {
+  display: flex;
+  width: 55%;
+  height: 100vh;
+  border-bottom: solid #fdbd03 10px;
+  justify-content: end;
+  align-items: center;
+}
+/* ילד */
+.textAndForm {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+/* טקסט ראשי */
+.text h1 {
+  color: #fdbd03;
+  font: normal normal 900 46px/97px Heebo;
+}
+/* פרגרף */
+.text p {
+  text-align: right;
+  font: normal normal normal 18px/29px Heebo;
+  letter-spacing: 0px;
+  color: #020253;
+  width: 100%;
+}
+/* אבא שמחזיק את האימפוטים הרגילים והליבל */
+.form-dad {
+  display: flex;
+  gap: 16px;
+}
+.label-blue {
+  width: 100%;
+  text-align: right;
+  font: normal normal bold 13px/24px Heebo;
+  letter-spacing: 0px;
+  color: #2c2c2c;
+  opacity: 1;
+}
+.input-normal {
+  width: 100%;
+  /* width: 330px; */
+  height: 35px;
+  background: #e5eeff 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border: none;
+  border-bottom: 4px #fdbd03 solid;
+}
+
+/*  הבן שמחזיק את האימפוטים והליבלים   */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+.textarea-control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+#input-normal {
+  height: 100px;
+  border: none;
+  border-bottom: 4px #fdbd03 solid;
+  background: #e5eeff 0% 0% no-repeat padding-box;
+  margin-bottom: 40px;
+}
+
+/* כפתור שליחה */
+.btn {
+  border: none;
+  width: 166px;
+  font: normal normal bold 15px/30px Heebo;
+  letter-spacing: 0.33px;
+  color: #000000;
+  background: #fdbd03 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+/* עיצוב מסביב כל המדיה למינהם */
+.whatup {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  border-radius: 360px;
+  width: 45px;
+  height: 45px;
+  background-color: #fdbd03;
+}
+.whatup img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  position: absolute;
+  top: 5px;
+  left: 6px;
+}
+
+.media {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  width: 290px;
+  height: 80px;
+}
+.media img {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+.media-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fdbd03;
+  border-radius: 360px;
+}
+
+.media-2 {
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+  background-color: #fdbd03;
+  border-radius: 360px;
+}
+.media-3 {
+  position: absolute;
+  bottom: 0;
+  left: 140px;
+  background-color: #fdbd03;
+  border-radius: 360px;
+}
+.media-4 {
+  position: absolute;
+  bottom: 0;
+  left: 210px;
+  background-color: #fdbd03;
+  border-radius: 360px;
+}
+
+@media (max-width: 786px) {
+  .dad {
+    flex-direction: column;
+  }
+
+  /* קטע דיב עליון 50% מהעמוד */
+  .cel-pic {
+    height: 25vh;
+    width: 100%;
+  }
+  /* קו צהוב עליון */
+  .top-yellow {
+    top: 0px;
+    width: 300px;
+    /* right: 15px; */
+    /* left: 15px; */
+  }
+  /* התמונה של הפלאפון */
+  .phone {
+    width: 100px;
+    height: 140px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+  }
+  /* הווצאפ להעלים */
+  .whatup {
+    display: none;
+  }
+  .form {
+    height: 800px;
+    width: 100%;
+    position: relative;
+  }
+  .textAndForm {
+    width: 80%;
+    height: 700px;
+    margin: auto;
+  }
+  .text {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .text p {
+    width: 99%;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+  }
+  .form-dad {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  #input-normal{
+    margin-bottom: 15px;
+  }
+
+  .btn{
+    width: 100%;
+  }
+
+  .media{
+   
+    
+    /* נסיון */
+    /* position: absolute; */
+   left: 5em; 
+    bottom: -80px;
+
+    /* עוד נסיונות */
+    /* bottom:20px; */
+    /* left: 50%; */
+
+    
+    
+  }
+}

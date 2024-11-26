@@ -1,0 +1,69 @@
+main{
+    background-color: #EBFEFF;  
+  }
+  .mainbg {
+      /* background: linear-gradient(
+        to bottom,
+        rgb(33, 0, 163),
+        rgb(230, 204, 255),
+        rgb(141, 48, 228)
+      ); */
+      background: url(../../photo/intro.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 78vh;
+      color: white;
+      box-sizing: border-box;
+    }
+  
+    .cor{
+      color: blueviolet;
+    }
+    .cor2{
+      text-decoration:none;
+      color: white;
+    }
+    .my-custom-button {
+      margin: 25px;
+      background: linear-gradient(
+        to bottom,
+    
+        rgb(141, 48, 228),
+        rgb(230, 204, 255),
+        rgb(141, 48, 228)
+      );
+      border: none;
+      color: white;
+      border-radius: 50px;
+    }
+    .my-custom-button:hover {
+      border: white 2px solid;
+      scale: 20px;
+    }
+    .land{
+      background-color: #EBFEFF;
+      
+    }
+    .ariel{
+      width: 70%;
+      height: 50%;
+      margin: auto;
+      
+    }
+  
+    /* #iframeajust{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      margin: 100px auto;
+      height: 500px;
+      
+    } */
+     .my-image{
+      padding: 200px;
+     }
+     @media(max-width:678px){
+
+     }
