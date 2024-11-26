@@ -37,7 +37,7 @@
   font-style: normal;
   font-size: 100px;
   font-weight: 100;
-  margin-top: 100px;
+  
 }
 .text > h4 {
   font-family: "Varela Round", sans-serif;
@@ -47,7 +47,7 @@
 }
 .text > p {
   font-family: "Varela Round", sans-serif;
-  padding-bottom: 0;
+  padding-bottom: 20px;
 }
 .in {
   color: white;
@@ -104,17 +104,25 @@
   }
   .text > h1 {
     padding-top: 25px;
-    font-size: 30px;
+    font-size: 60px;
     justify-content: center;
+    margin-top: 130px;
+   
   }
   .text > h4 {
-    font-size: 10px;
+    font-size: 20px;
   }
   .text > p {
-    font-size: 8px;
+    font-size: 18px;
+    margin-bottom: 50px;
+    
+  }
+  .text h4{
+    margin-bottom: 0px;
   }
   .in {
     display: block;
+    width: 100%;
     height: 50vh;
     
     
@@ -122,17 +130,29 @@
   .in1 {
     flex-direction: column;
     margin: auto;
+    width: 100%;
   }
   .form-control {
     margin: auto;
+    width: 100%;
   }
   .in > button {
-    width:200px ;
+    width:80% ;
+    height: 40px;
+    margin-top: 17px;
     color: #2823FD;
   }
-  /* .in > .in1 > .form-control > label {
-  } */
+  .in > .in1 > .form-control > label {
+  width: 80%;
+  margin: auto;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  
+  }
   .in > .in1 > .form-control > input {
-    width: 200px;
+    width: 80%;
+    height: 45px;
+    margin: auto;
   }
 }
