@@ -14,12 +14,22 @@
   justify-content: center;
 }
 .text {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   color: white;
   font-family: "Satisfy", cursive;
 }
+/* .toajust{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  font-family: "Satisfy", cursive;
+} */
 
 .text > h1 {
   font-family: "Satisfy", cursive;
@@ -27,6 +37,7 @@
   font-style: normal;
   font-size: 100px;
   font-weight: 100;
+  margin-top: 100px;
 }
 .text > h4 {
   font-family: "Varela Round", sans-serif;
@@ -36,7 +47,7 @@
 }
 .text > p {
   font-family: "Varela Round", sans-serif;
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
 .in {
   color: white;
