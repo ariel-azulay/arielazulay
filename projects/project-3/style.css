@@ -91,14 +91,15 @@
     font: normal normal bold 10px/14px Heebo;
   }
   .form-control > input {
-    width: 286px;
+    width: 256px;
     height: 34px;
 
     background: #e5eeff 0% 0% no-repeat padding-box;
   }
   .form > button {
-    width: 286px;
+    width: 256px;
     height: 34px;
+    margin-bottom: 55px;
     font: normal normal bold 14px/19px Heebo;
   }
 }
