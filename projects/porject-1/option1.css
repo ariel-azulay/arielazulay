@@ -87,10 +87,10 @@
     position: absolute;
     padding: 50px;
     margin: auto;
-    top: 120px;
-    right: 55px;
-    width: 170px;
-    height: 300px;
+    top: 220px;
+    right: 40px;
+    width: 240px;
+    height: 400px;
   }
   .abs-content > h2 {
     /* padding-top: 60px; */
