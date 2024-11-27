@@ -91,8 +91,8 @@
       <!--   כפתור קורות חיים + איך עושים הורדה -->
       <div class="container-fluid  text-center p-4  border">
         <a
-          href="./pj.txt"
-          download="./pj.txt"
+          href="/txt/projectX.txt"
+          download="/txt/projectX.txt"
           class="btn btn-primary my-custom-button"
           >להורדת קוד האתר</a
         >
@@ -490,3 +490,113 @@
     <script src="./script.js"></script>
   </body>
 </html>
+
+
+
+
+
+----------------------------css-------------------------------------------------
+
+
+/* אריאל אזולאי */
+
+/* מיין ראשי */
+
+/* דיב ראשי נאב */
+.mainbg {
+  /* background: linear-gradient(
+    to bottom,
+    rgb(33, 0, 163),
+    rgb(230, 204, 255),
+    rgb(141, 48, 228)
+  ); */
+  background: url(./photo/intro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 78vh;
+  color: white;
+  box-sizing: border-box;
+}
+/* קצת עלי דיב ראשי */
+.abouta {
+  background-color: white;
+
+}
+@media (min-width: 220px) and (max-width: 413px) {
+  .abouta {
+    flex-direction: column;
+  }
+}
+@media (min-width: 414px) and (max-width: 768px) {
+  .abouta {
+    flex-direction: column;
+  }
+}
+
+/* @media (min-width: 769px)  {
+  .text-aboutme{
+    
+  }
+} */
+/* דיב ראשי שירותים */
+.servicesa {
+  background: linear-gradient(
+    to bottom,
+
+    rgb(141, 48, 228),
+    rgb(230, 204, 255),
+    rgb(141, 48, 228)
+  );
+}
+/* דיב ראשי דפי נחיתה */
+.worksa {
+  background-color: white;
+  color: #963fe8;
+}
+/* כותרת בתוך הכרטיסיה וטקסט ובכל האתר*/
+.all_text {
+  color: #963fe8;
+  font-family: "Roboto", sans-serif;
+}
+.all_text:hover {
+  color: #3c00f0;
+}
+/* צור קשר */
+.contacta {
+  background: linear-gradient(
+    to bottom,
+
+    rgb(141, 48, 228),
+    rgb(230, 204, 255),
+    rgb(141, 48, 228)
+  );
+  font-weight: 600;
+  color: white;
+}
+/* פוטר כשמו כן הוא */
+footer .rights {
+  background-color: #963fe8;
+}
+/* עיצוב לכל הכפתורים בדף */
+.my-custom-button {
+  background-color: #963fe8;
+  border: none;
+}
+.my-custom-button:hover {
+  background: linear-gradient(
+    to bottom,
+
+    rgb(141, 48, 228),
+    rgb(230, 204, 255),
+    rgb(141, 48, 228)
+  );
+}
+/* עיצוב לכרטיסיות של הדפי נחיתה */
+.card-bd {
+  border: #963fe8 solid 1px;
+}
+-----------------------------------js-------------------------------
+
+
+
