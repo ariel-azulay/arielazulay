@@ -1,3 +1,16 @@
+// ------css-part-------------------------
+const divDad =document.getElementById('gameInCenter');
+
+
+
+
+// divDad.style.backgroundColor="green";
+divDad.style.textAlign="center";
+
+
+
+
+// ------js-part-------------------------
 const select = document.querySelector("select");
 const number1 = document.getElementById("number1");
 const number2 = document.getElementById("number2");
@@ -64,3 +77,5 @@ function checkAnswer() {
     console.log("try again...");
   }
 }
+
+
