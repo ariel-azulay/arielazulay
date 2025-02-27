@@ -1,0 +1,76 @@
+/* עיצוב כללי */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* / עיצוב המחשבון / */
+.calculator {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+/* / תצוגת התוצאה / */
+.display {
+  margin-bottom: 20px;
+}
+
+#result {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: right;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding-right: 10px;
+}
+
+/* / כפתורים / */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.btn {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.operator {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.operator:hover {
+  background-color: #e84141;
+}
+
+/* / רספונסיביות */ 
+@media screen and (max-width: 400px) {
+    .calculator {
+      width: 90%;
+    }
+  
+    .btn {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
