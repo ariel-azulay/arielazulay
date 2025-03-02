@@ -8,17 +8,14 @@ body{
     height: 100vh;
     background-color: blue;
     display: flex;
+   
     
 }
 
 section{
-    width: auto;
+    padding-left: 50px;
 }
-.fix-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .memory-game{
     width: 640px;
     height: 540px;
@@ -71,7 +68,7 @@ section{
     }
 
     .memory-card {
-        width: calc(40% - 39px); /* 2 קלפים בשורה */
+        width: calc(50% - 100px); /* 2 קלפים בשורה */
         height: calc(60% - 250px); /* גובה כל קלף יהיה חצי מהגובה */
     }
 }

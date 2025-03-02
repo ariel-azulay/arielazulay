@@ -65,7 +65,9 @@ function resetBoard (){
 }
 function checkWin(){
     if (matchedCards===cards.length){
-        setTimeout(()=> alert ('הצלחת במשחק'),500)
+        setTimeout(()=> {alert ('הצלחת במשחק')
+        location.reload();}
+        ,500)
     }
 }
 
