@@ -96,3 +96,8 @@ footer .rights {
 .card-bd {
   border: #963fe8 solid 1px;
 }
+#jsProjectsh1{
+  padding: 20px;
+  text-decoration: underline;
+  border-top: solid rgb(141, 48, 228) 3px;
+}
