@@ -8,15 +8,25 @@ body{
     height: 100vh;
     background-color: blue;
     display: flex;
+    
+}
+
+section{
+    width: auto;
+}
+.fix-h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .memory-game{
     width: 640px;
-    height: 640px;
+    height: 540px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
-    border:red solid 2px
+    
     
 }
 .memory-card{
@@ -56,24 +66,13 @@ body{
 @media (max-width: 600px) {
     .memory-game {
         width: 95vh; /* הלוח יתפוס כמעט את כל רוחב המסך */
-        height: 80vh; /* גובה הלוח יהיה שווה לרוחב */
+        height: 80vh;/* גובה הלוח יהיה שווה לרוחב */
+
     }
 
     .memory-card {
-        width: calc(50% - 50px); /* 2 קלפים בשורה */
-        height: calc(50% - 250px); /* גובה כל קלף יהיה חצי מהגובה */
+        width: calc(40% - 39px); /* 2 קלפים בשורה */
+        height: calc(60% - 250px); /* גובה כל קלף יהיה חצי מהגובה */
     }
 }
 
-/* רספונסיביות לטאבלטים */
-@media (max-width: 400px) {
-    .memory-game {
-        width: 98vw; /* הלוח יתפוס כמעט את כל רוחב המסך */
-        height: 98vw; /* גובה הלוח יהיה שווה לרוחב */
-    }
-
-    .memory-card {
-        width: calc(50% - 10px); /* 2 קלפים בשורה */
-        height: calc(50% - 10px); /* גובה כל קלף יהיה חצי מהגובה */
-    }
-}
