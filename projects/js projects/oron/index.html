@@ -3,24 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <title>Oron</title>
   </head>
   <body>
     <div id="gameInCenter">
       <h1>Oron Game</h1>
 
-    <select name="" id="">
-      <option selected disabled>בחר אפשרות</option>
-      <option value="קל">1-10</option>
-      <option value="בינוני">10-100</option>
-      <option value="קשה">100-1000</option>
-    </select>
+      <select name="" id="">
+        <option selected disabled>בחר אפשרות</option>
+        <option value="קל">1-10</option>
+        <option value="בינוני">10-100</option>
+        <option value="קשה">100-1000</option>
+      </select>
 
-    <div id="game">
-      <span id="number1"></span> + <span id="number2"></span> =
-      <input type="number" id="result" />
-      <button onclick="checkAnswer()">בדוק תשובה</button>
-    </div>
+      <div id="game">
+        <span id="number1"></span> + <span id="number2"></span> =
+        <input type="number" id="result" />
+        <button onclick="checkAnswer()">בדוק תשובה</button>
+      </div>
     </div>
     
     <script src="./script.js"></script>

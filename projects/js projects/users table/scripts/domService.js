@@ -12,15 +12,30 @@ const drawTableRows =(users)=>{
         <td>${user.lastName}</td>
         <td>${user.email}</td>
         <td>${user.password}</td>
-        <td>${user.isLogedIn}</td>
+        <td>${user.isLogedIn ? 'מחובר' : 'מנותק'}</td>
         
         `
+        const logoutBtn = document.createElement('button');
+        logoutBtn.textContent ='התנתקות';
+        logoutBtn.addEventListener('click', ()=>{
+            User.logout(user.id);
+        })
+
         const deleteBtn = document.createElement('button');
-        deleteBtn.textContent ='Delete';
+        deleteBtn.textContent ='מחיקה';
         deleteBtn.addEventListener('click',()=>{
             User.removeUser(user.id)
         });
+
+        const editButton = document.createElement('button');
+        editButton.textContent = 'עריכה';
+        editButton.addEventListener('click',()=>{
+            // עריכה עלינו  
+        })
+
         row.appendChild(deleteBtn)
+        row.appendChild(logoutBtn)
+        row.appendChild(editButton)
         tableBody.appendChild(row)
     })
 };
@@ -35,9 +50,32 @@ registerForm.addEventListener('submit',(e)=>{
     const email = e.target.elements.email.value;
     const password = e.target.elements.password.value;
 
+    const users = User.usersList;
+    if(users.find((user) => user.email === email)){
+        alert ('משתמש עם אימייל זה כבר קיים')
+        return;
+    }
+
     new User(firstName,lastName,email,password);
     e.target.reset();
 });
 
 
-export {drawTableRows, registerForm};
+const loginForm = document.querySelector('.login-form');
+loginForm.addEventListener('submit',(e) => {
+    e.preventDefault();
+
+    const email = e.target.elements.email.value;
+    const password = e.target.elements.password.value;
+
+    const user = User.usersList.find((user) => user.email === email)
+    if (user && user.password === password){
+        User.login(user.id);
+        e.target.reset();
+    }else{
+        alert('שם המשתמש או הסיסמה לא נכונים')
+    }
+})
+
+
+export {drawTableRows, registerForm ,loginForm};

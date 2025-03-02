@@ -4,7 +4,7 @@ const divDad =document.getElementById('gameInCenter');
 
 
 
-// divDad.style.backgroundColor="green";
+divDad.style.backgroundColor="green";
 divDad.style.textAlign="center";
 
 
