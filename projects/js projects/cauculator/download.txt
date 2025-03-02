@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מחשבון רספונסיבי</title>
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>מחשבון רגיל</h1>
+  <div class="calculator">
+    <div class="display">
+      <input type="text" id="result" readonly>
+    </div>
+    <div class="buttons">
+      <!-- שורה ראשונה -->
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn operator">/</button>
+      <!-- שורה שנייה -->
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn operator">*</button>
+      <!-- שורה שלישית -->
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn operator">-</button>
+      <!-- שורה רביעית -->
+      <button class="btn">0</button>
+      <button class="btn">C</button>
+      <button class="btn">=</button>
+      <button class="btn operator">+</button>
+    </div>
+  </div>
+</body>
+</html>
+
+------------------------------------------
+css
+
+/* עיצוב כללי */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #786262;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* / עיצוב המחשבון / */
+.calculator {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+/* / תצוגת התוצאה / */
+.display {
+  margin-bottom: 20px;
+}
+
+#result {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: right;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding-right: 10px;
+}
+
+/* / כפתורים / */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.btn {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.operator {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.operator:hover {
+  background-color: #e84141;
+}
+
+/* / רספונסיביות */ 
+@media screen and (max-width: 400px) {
+    .calculator {
+      width: 90%;
+    }
+  
+    .btn {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
+
+
+  ------------------------------------------
+
+  js
+
+  const buttons = document.querySelectorAll('.btn');
+const resultDisplay = document.getElementById('result');
+
+let currentInput = '';
+let operator = '';
+let firstOperand = null;
+
+// פונקציה ללחיצה על כפתור
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const value = button.textContent;
+
+    if (value === 'C') {
+      clearDisplay();
+    } else if (value === '=') {
+      calculateResult();
+    } else if (['+', '-', '*', '/'].includes(value)) {
+      setOperator(value);
+    } else {
+      appendNumber(value);
+    }
+  });
+});
+
+// פונקציה להוספת מספר לתצוגה
+function appendNumber(number) {
+  currentInput += number;
+  resultDisplay.value = currentInput;
+}
+
+// פונקציה להגדרת אופרטור
+function setOperator(op) {
+  if (currentInput === '') return;
+  operator = op;
+  firstOperand = parseFloat(currentInput);
+  currentInput = '';
+}
+
+// פונקציה לחישוב התוצאה
+function calculateResult() {
+    if (!firstOperand || currentInput === '' || !operator) return;
+  
+    const secondOperand = parseFloat(currentInput);
+    let result;
+  
+    switch (operator) {
+      case '+':
+        result = firstOperand + secondOperand;
+        break;
+      case '-':
+        result = firstOperand - secondOperand;
+        break;
+      case '*':
+        result = firstOperand * secondOperand;
+        break;
+      case '/':
+        result = firstOperand / secondOperand;
+        break;
+      default:
+        return;
+    }
+  
+    resultDisplay.value = result;
+    currentInput = result.toString();
+    operator = '';
+    firstOperand = null;
+  }
+
+// פונקציה לניקוי התצוגה
+function clearDisplay() {
+  currentInput = '';
+  operator = '';
+  firstOperand = null;
+  resultDisplay.value = '';
+}
