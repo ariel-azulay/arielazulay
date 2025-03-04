@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./style.css">
+    <title>איקס עיגול יאבאבה</title>
+</head>
+<body>
+    <div class="container">
+        
+                <a style="color:#F2C14E; text-align: center;text-decoration: none ;font-size: 20px;" href="../tic-tac-toe/Bpj.html">חזרה לעמוד הקודם</a>
+            
+        <h1 id="plyertext">Tic Tac Toe</h1>
+        
+        <div class="game-board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        
+        <div class="game-players">
+            <div class="player player1">player 1 : X</div>
+            <div class="player player2">player 2: O</div>
+        </div>
+        <button class="restartBtn">Restart</button>
+    </div>
+    
+     
+    <script src="./script.js"></script>
+</body>
+</html>
+
+==================================
+js
+// let playerText = document.getElementById('playerText')
+// let restartBtn = document.getElementById('restartBtn')
+// let boxes = Array.from(document.getElementsByClassName('box'))
+
+// let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--winning-blocks')
+
+// const O_TEXT = "O"
+// const X_TEXT = "X"
+// let currentPlayer = X_TEXT
+// let spaces = Array(9).fill(null)
+
+// const startGame = () => {
+//     boxes.forEach(box => box.addEventListener('click', boxClicked))
+// }
+
+// function boxClicked(e) {
+//     const id = e.target.id
+
+//     if(!spaces[id]){
+//         spaces[id] = currentPlayer
+//         e.target.innerText = currentPlayer
+
+//         if(playerHasWon() !==false){
+//             playerText.innerHTML = `${currentPlayer} has won!`
+//             let winning_blocks = playerHasWon()
+
+//             winning_blocks.map( box => boxes[box].style.backgroundColor=winnerIndicator)
+//             return
+//         }
+
+//         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
+//     }
+// }
+
+// const winningCombos = [
+//     [0,1,2],
+//     [3,4,5],
+//     [6,7,8],
+//     [0,3,6],
+//     [1,4,7],
+//     [2,5,8],
+//     [0,4,8],
+//     [2,4,6]
+// ]
+
+// function playerHasWon() {
+//     for (const condition of winningCombos) {
+//         let [a, b, c] = condition
+
+//         if(spaces[a] && (spaces[a] == spaces[b] && spaces[a] == spaces[c])) {
+//             return [a,b,c]
+//         }
+//     }
+//     return false
+// }
+
+// restartBtn.addEventListener('click', restart)
+
+// function restart() {
+//     spaces.fill(null)
+
+//     boxes.forEach( box => {
+//         box.innerText = ''
+//         box.style.backgroundColor=''
+//     })
+
+//     playerText.innerHTML = 'Tic Tac Toe'
+
+//     currentPlayer = X_TEXT
+// }
+
+// startGame()
+
+const gameCell = document.querySelectorAll(".cell");
+const player1 = document.querySelector(".player1");
+const player2 = document.querySelector(".player2");
+const restartBtn = document.querySelector(".restartBtn");
+
+let currentPlayer = "X";
+let nextPlayer = "O";
+let playerTurn = currentPlayer;
+
+const startGame = () => {
+  gameCell.forEach((cell) => {
+    cell.addEventListener("click", (e) => {
+      if (e.target.textContent === '') {
+        e.target.textContent = playerTurn;
+        if (checkWin()){
+            console.log(`${playerTurn} is a Winner!`);
+            
+        }
+        else if(chackTie()){
+            console.log(`It's a Tie!`);
+            
+        }else{
+            changePlayerTurn();
+        }
+      }
+    });
+  });
+};
+
+//function to change players turn
+const changePlayerTurn = () => {
+//   if (playerTurn === currentPlayer){
+//       playerTurn = nextPlayer;
+//   }else{
+//       playerTurn =currentPlayer;
+//   }
+  playerTurn = playerTurn === currentPlayer ? nextPlayer : currentPlayer;
+};
+// function to chack win
+const checkWin = () => {
+  const winningConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i < winningConditions.length; i++) {
+    const [pos1, pos2, pos3] = winningConditions[i];
+    if (
+      gameCell[pos1].textContent !== "" &&
+      gameCell[pos1].textContent === gameCell[pos2].textContent &&
+      gameCell[pos2].textContent === gameCell[pos3].textContent
+    ) {
+      return true;
+    }
+
+    // console.log(`${pos1} ${pos2} ${pos3}`);
+  }
+  return false;
+};
+
+// function to chack tie
+const chackTie =()=>{
+    let emptyCellCount=0;
+    gameCell.forEach(cell=>{
+        if(cell.textContent ===''){
+            emptyCellCount++;
+        }
+    });
+
+    return emptyCellCount === 0 && !checkWin()
+}
+
+// calling start game function
+startGame();
+====================================
+css
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 
+
+
+
+
+:root {
+    --orange: #F2C14E;
+    --winning-blocks: #2d414b;
+}
+
+body {
+    color: var(--orange);
+    font-family: 'Finger Paint', cursive;
+}
+h1 {
+    font-size: 64px;
+    text-transform: capitalize;
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #182226;
+}
+
+#gameboard {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 120px;
+    border-right: 5px solid;
+    border-bottom: 5px solid;
+}
+.box:nth-child(3n) {
+    border-right: none;
+}
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+} 
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: #333;
+    border-color: var(--orange);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+} */
+
+
+
+body{
+    background: #334155;
+    color:#F2C14E
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 50px;
+    margin: 40px;
+    text-decoration: underline;
+}
+
+.game-board{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(120px,1fr));
+}
+
+
+.cell{
+    border: 2.5px solid rgb(241, 233, 14);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 60px;
+    font-weight: 500;
+    height: 120px;
+    cursor: pointer ;
+
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n){
+    border-right: none;   
+}
+.cell:nth-child(3n+1){
+    border-left: none;   
+}
+.cell:nth-child(n+7){
+    border-bottom: none;   
+}
+
+.game-players{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.player{
+    margin-inline:18px ;
+    font-size: 24px;
+    font-weight: 600;
+
+}
+.restartBtn{
+    border: none;
+    background: #F2C14E;
+    color:#334155;
+    font-size: 22px;
+    font-weight: 700;
+    margin-block:18px ;
+    padding: 10px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.restartBtn:hover{
+    background: #7272e1;
+    color: white;
+}
+
+@media screen and(max-width:550px ) {
+    .container h1{
+        font-size: 24px;
+    }
+    .game-board{
+        grid-template-columns: repeat(3,minmax(90px,1fr));
+    }
+    .cell{
+        height: 90px;
+        font-size: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
