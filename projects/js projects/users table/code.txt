@@ -1,0 +1,348 @@
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>users management</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./scripts/index.js" defer></script>
+</head>
+<body dir="rtl">
+    <div class="container-register">
+        <h1>הרשמה</h1>
+         <form class="register-form">
+            <div class="form-control">
+                <label for="firstName">שם פרטי</label>
+                <input type="text" name="firstName" id="firstName">
+            </div>
+            <div class="form-control">
+                <label for="lastName">שם משפחה</label>
+                <input type="text" name="lastName" id="lastName">
+            </div>
+            <div class="form-control">
+                <label for="email">אימייל </label>
+                <input type="email" name="email" id="register-email"
+                autocomplete="username">
+            </div>
+            <div class="form-control">
+                <label for="password">סיסמא</label>
+                <input type="password" name="password" id="register-password" autocomplete="current-password">
+            </div>
+            <button type="submit">הרשם</button>
+         </form>
+    </div>
+
+    <div class="container-login">
+        <h1>התחברות</h1>
+        <form class="login-form">
+            <div class="form-control">
+                <label for="email">אימייל </label>
+                <input type="email" name="email" id="login-email"
+                autocomplete="username">
+            </div>
+            <div class="form-control">
+                <label for="password">סיסמא</label>
+                <input type="password" name="password" id="login-password" autocomplete="current-password">
+            </div>
+            <button type="submit">התחברות</button>
+         </form>
+    </div>
+
+    <div class="container-users">
+        <h1>משתמשים</h1>
+
+
+        <table id="users-table" >
+            <thead>
+                <tr>
+                    <th>שם פרטי</th>
+                    <th>שם משפחה</th>
+                    <th>אימייל</th>
+                    <th>סיסמא</th>
+                    <th>סטטוס</th>
+                    <th>פעולות</th>
+                </tr>
+            </thead>
+            <tbody id="users-table-body">
+                <!-- content from js -->
+            </tbody>
+
+        </table>
+    </div>
+         
+    
+</body>
+</html>
+
+=================================================
+
+style
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+
+
+}
+
+body{
+    /* background-color:bisque ; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image:url(../../../photo/כניסה.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.container-register{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1px solid white;
+    backdrop-filter: blur(20px);
+    width: 250px;
+    border-radius: 20px;
+}
+
+.register-form{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px; 
+}
+.form-control{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+}
+ .login-form{
+    display: flex;
+    margin-top: 30px;
+    border-radius: 20px;
+    gap:10px ;
+}
+
+.container-users{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    backdrop-filter: blur(20px);
+    gap: 10px;
+    width: 80%;
+    height: 400px;
+}
+/* #users-table{
+
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    width: 100%;
+    thead{
+        background-color: grey;
+        backdrop-filter: blur(20px);
+    
+
+    }
+    tbody{
+        border: 1px solid #000;
+        text-align: center;
+    }
+    
+    th{
+        padding: 0px 55px;
+        border: 1px solid #000;
+    }
+    td{
+        border: 1px solid #000;
+        padding: 0px 30px;
+    }
+} */
+#users-table {
+    width: 100%;
+    border-collapse: collapse; /* מונע רווחים בין תאים */
+}
+
+#users-table th, #users-table td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+#users-table th {
+    background-color: grey;
+    color: white;
+}
+
+
+
+=================================
+
+js
+
+import { User } from "./User.js";
+
+const drawTableRows =(users)=>{
+    const tableBody =document.querySelector('#users-table-body');
+
+    tableBody.innerHTML ='';
+
+    users.forEach((user)=>{
+        const row = document.createElement('tr');
+        row.innerHTML=`
+        <td>${user.firstName}</td>
+        <td>${user.lastName}</td>
+        <td>${user.email}</td>
+        <td>${user.password}</td>
+        <td>${user.isLogedIn ? 'מחובר' : 'מנותק'}</td>
+        
+        `
+        const logoutBtn = document.createElement('button');
+        logoutBtn.textContent ='התנתקות';
+        logoutBtn.addEventListener('click', ()=>{
+            User.logout(user.id);
+        })
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent ='מחיקה';
+        deleteBtn.addEventListener('click',()=>{
+            User.removeUser(user.id)
+        });
+
+        const editButton = document.createElement('button');
+        editButton.textContent = 'עריכה';
+        editButton.addEventListener('click',()=>{
+            // עריכה עלינו  
+        })
+
+        row.appendChild(deleteBtn)
+        row.appendChild(logoutBtn)
+        row.appendChild(editButton)
+        tableBody.appendChild(row)
+    })
+};
+
+const registerForm =document.querySelector(".register-form")
+registerForm.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    
+
+    const firstName = e.target.elements.firstName.value;
+    const lastName = e.target.elements.lastName.value;
+    const email = e.target.elements.email.value;
+    const password = e.target.elements.password.value;
+
+    const users = User.usersList;
+    if(users.find((user) => user.email === email)){
+        alert ('משתמש עם אימייל זה כבר קיים')
+        return;
+    }
+
+    new User(firstName,lastName,email,password);
+    e.target.reset();
+});
+
+
+const loginForm = document.querySelector('.login-form');
+loginForm.addEventListener('submit',(e) => {
+    e.preventDefault();
+
+    const email = e.target.elements.email.value;
+    const password = e.target.elements.password.value;
+
+    const user = User.usersList.find((user) => user.email === email)
+    if (user && user.password === password){
+        User.login(user.id);
+        e.target.reset();
+    }else{
+        alert('שם המשתמש או הסיסמה לא נכונים')
+    }
+})
+
+
+export {drawTableRows, registerForm ,loginForm};
+
+----------------
+
+js 2
+
+
+import { registerForm ,loginForm } from "./domService.js";
+
+----------------
+js 3
+
+
+import { drawTableRows } from "./domService.js";
+
+export class User{
+    static usersList =localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) :[];
+    static count = 0 ;
+
+    id;
+    firstName;
+    lastName;
+    email;
+    password;
+    isLogedIn= false;
+
+    constructor(firstName,lastName,email,password){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password =password;
+        this.id =++User.count;
+
+        User.usersList.push(this);
+        localStorage.setItem('users',JSON.stringify(User.usersList))
+        drawTableRows(User.usersList)
+    }
+    static removeUser(id){
+        User.usersList = User.usersList.filter(user => user.id !== id);
+        localStorage.setItem('users',JSON.stringify(User.usersList))
+        drawTableRows(User.usersList)
+    }
+
+    static login (id){
+        const user = User.usersList.find((user)=> user.id === id);
+        user.isLogedIn = true ;
+        localStorage.setItem('users',JSON.stringify(User.usersList))
+        drawTableRows(User.usersList);
+
+    }
+    static logout (id){
+        const user = User.usersList.find((user)=> user.id === id);
+        localStorage.setItem('users',JSON.stringify(User.usersList))
+        user.isLogedIn = false ;
+        drawTableRows(User.usersList);
+
+    }
+}
