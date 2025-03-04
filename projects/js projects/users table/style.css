@@ -1,20 +1,121 @@
-.register-form, .login-form{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+
+
+}
+
+body{
+    /* background-color:bisque ; */
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    gap:10px ;
+    height: 100vh;
+    background-image:url(../../../photo/כניסה.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.container-register{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1px solid white;
+    backdrop-filter: blur(20px);
+    width: 250px;
+    border-radius: 20px;
+}
+
+.register-form{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px; 
 }
 .form-control{
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-#users-table{
+.container-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+}
+ .login-form{
+    display: flex;
+    margin-top: 30px;
+    border-radius: 20px;
+    gap:10px ;
+}
+
+.container-users{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    backdrop-filter: blur(20px);
+    gap: 10px;
     width: 80%;
+    height: 400px;
+}
+/* #users-table{
+
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    width: 100%;
     thead{
-        background-color: aquamarine;
+        background-color: grey;
+        backdrop-filter: blur(20px);
+    
 
     }
     tbody{
+        border: 1px solid #000;
         text-align: center;
     }
+    
+    th{
+        padding: 0px 55px;
+        border: 1px solid #000;
+    }
+    td{
+        border: 1px solid #000;
+        padding: 0px 30px;
+    }
+} */
+#users-table {
+    width: 100%;
+    border-collapse: collapse; /* מונע רווחים בין תאים */
+}
+
+#users-table th, #users-table td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+#users-table th {
+    background-color: grey;
+    color: white;
 }
