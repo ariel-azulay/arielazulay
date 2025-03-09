@@ -98,6 +98,34 @@ body{
     background-color: grey;
     color: white;
 }
+label{
+    color: white;
+}
+
+input{
+     
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    
+    outline: none;
+    background:transparent
+    
+}
+button{
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: rgb(174, 195, 234);
+    color: white;
+    font-weight: 600;
+    
+}
+button:hover{
+    color:black
+}
+
+
 
 @media  (max-width:780px) {
     
