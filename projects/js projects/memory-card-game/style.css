@@ -60,16 +60,17 @@ section{
 }
 
 /* רספונסיביות לפלאפונים */
-@media (max-width: 600px) {
+@media (max-width: 668px) {
     .memory-game {
-        width: 95vh; /* הלוח יתפוס כמעט את כל רוחב המסך */
-        height: 80vh;/* גובה הלוח יהיה שווה לרוחב */
+        width: 100vh; 
+        height: 80vh;
+        
 
     }
 
     .memory-card {
-        width: calc(50% - 100px); /* 2 קלפים בשורה */
-        height: calc(60% - 250px); /* גובה כל קלף יהיה חצי מהגובה */
+        width: calc(70% - 100px); /* 2 קלפים בשורה */
+        height: calc(50% - 250px); /* גובה כל קלף יהיה חצי מהגובה */
     }
 }
 
